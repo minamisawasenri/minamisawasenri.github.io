@@ -1,1 +1,7 @@
 _site/
+_posts/
+.sass-cache/
+_config.yml
+about.md
+index.md
+Gemfile*
