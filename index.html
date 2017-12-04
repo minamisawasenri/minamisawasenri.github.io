@@ -42,6 +42,9 @@
 				height: 100%;
 			}
 
+			.page {
+				overflow-y: scroll;
+			}
 
 			.parallax {
 				/* The image used */
@@ -151,6 +154,11 @@
 				max-width: 400px;
 				width: 100%;
 			}
+
+
+			.cursor {
+				cursor:pointer;
+			}
 		</style>
 
 		<!-- Javascript -->
@@ -173,7 +181,7 @@
 				var cookies = document.cookie;
 				//split into individual cookies
 				var split = cookies.split(';');
-				console.log(split);
+
 				//loop through each cookie
 				for(var i = 0; i < split.length; i++){
 					//trim the cookie string
@@ -254,6 +262,61 @@
 					percentage[i].innerHTML = progress[i].value + '%';
 				}
 			}
+
+			var togglePost = function(post){
+				var posts = document.getElementsByClassName("post");
+				for(var i = 0; i < posts.length; i++){
+					posts.item(i).hidden = true;
+				}
+				var element = document.querySelector('[post="'+post+'"]');
+				if(element){
+					element.removeAttribute("hidden");
+				}
+				else if(post !== '404'){
+					togglePost('404');
+				}
+			}
+
+			var nextPost = function(){
+				var posts = document.getElementsByClassName("post");
+				for(var i = 0; i < posts.length; i++){
+					if(!posts.item(i).hidden){
+						posts.item(i).hidden = true;
+						posts.item(Math.max(0,i-1)).removeAttribute("hidden");
+						break;
+					}
+				}
+			}
+			var previousPost = function(){
+				var posts = document.getElementsByClassName("post");
+				for(var i = 0; i < posts.length; i++){
+					if(!posts.item(i).hidden){
+						posts.item(i).hidden = true;
+						posts.item(Math.min(i+1,posts.length-1)).removeAttribute("hidden");
+						break;
+					}
+				}
+			}
+
+			//stolen func wwwwwww
+			function getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+
+			var init = function(){
+				var postId = getParameterByName('post');
+				if(postId){
+					togglePage("main");
+					togglePost(postId);
+				}
+			};
+			document.addEventListener("DOMContentLoaded", init);
 		</script>
 	</head>
 
@@ -418,8 +481,38 @@
 				<div id="home" class="pure-u-1 pure-u-xl-2-3 fh page" page="home">
 					<div class="fw c content pure-g">
 						<div class="hxl pure-u-xl-1-4">
+							<h1 class="cursor" onclick="previousPost();">
+								&#x261c;
+							</h1>
 						</div>
-						<div class="pure-u-1 pure-u-xl-1-2">
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1512417320">
+							<h3>
+								Occultic;Nine Review
+							</h3>
+							<p>
+								Heading into the Occultic;Nine game, I was hoping for a Noah-style adaptation to improve on the base. Having watched the anime and read the first two light novels, I had found the core story and concepts good but felt that some of the side characters required some more expansion.
+							</p>
+							<p>
+								Instead of taking the anime ending and constructing routes alongside, they decided to just tweak the same route slightly so that not all information was present at once. You end up reading the same content again and again; hearing the same puke-drink-pun ten times does not make it any funnier / funny. After the three normal character routes, I hoped the true endings at least would give something new. They did not. The only route of note is the bad end.
+							</p>
+							<p>
+								Scenes which did not feature Gamon ended up cut, explained second-hand or forced in. Some of my favourite scenes involved MMG and Takasu. None of these scenes were shown and Takasu appears for about ten lines. We did get a few new scenes but these mostly took place in Bloo Moon, were based around the blog articles and only involved Gamon, Ryoka and Izumi.
+							</p>
+							<p>
+								The flaws in the story were not helped by the mechanics. The ‘Blogging triggers’ only mattered on the first two choices, but prevented skipping through the rest of the story. After making these decisions (about 1/5 of the way through the story) you then have to reach the last part for any change to occur (about 1/5 of the way from the end). The ‘Skysensor triggers’ did matter (a certain number are required to view all ends). In this case, there was no skip prevention and the triggers lasted for only a single line of text on occasion. With both of these triggers combined, more time overall was spent skipping rather than reading.
+							</p>
+							<p>
+								The only positive I can find in this adaptation was the MMM episodes. All new content here; thirty episodes, each of about five minutes in length.
+							</p>
+							<p>
+								Overall, the Occultic;Nine game is a bad adaptation, only existing for the sake of milking. Stick to the anime or light novels. However, the path is now opened to Anonymous;Code – hopefully the next instalment in this universe does not meet the same fate.
+							</p>
+							<img class="cc mwi" src="./public/img/1512417320.jpg" />
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1507842000" hidden>
 							<h3>
 								Ode to Chaos;Child
 							</h3>
@@ -439,7 +532,13 @@
 								- Minamisawa Senri
 							</p>
 						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="404" hidden>
+							Error. Post is 404, mismatch.
+						</div>
 						<div class="hxl pure-u-xl-1-4">
+							<h1 class="cursor" onclick="nextPost();">
+								&#x261e;
+							</h1>
 						</div>
 					</div>
 				</div>
