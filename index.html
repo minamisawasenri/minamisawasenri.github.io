@@ -5,6 +5,9 @@
 			Minamisawa Senri
 		</title>
 
+
+		<link rel="shortcut icon" type="image/png" href="./public/img/favicon.ico"/>
+
 		<!-- Meta headers -->
 		<meta charset="UTF-8">
 		<meta name="author" content="Minamisawa Senri">
@@ -449,6 +452,17 @@
 							</div>
 						</a>
 
+						<!-- Timeline -->
+						<a class="pure-button sb pure-g" href="./timeline">
+							<div class="pure-u-1-4">
+							<i class="fa fa-clock-o" aria-hidden="true">
+							</i>
+							</div>
+							<div class="pure-u-3-4">
+							Timeline
+							</div>
+						</a>
+
 						<!-- Live -->
 						<!--a class="pure-button sb pure-g" href="#" onclick="setPageFunc('live');">
 							<div class="pure-u-1-4">
@@ -481,11 +495,59 @@
 				<div id="home" class="pure-u-1 pure-u-xl-2-3 fh page" page="home">
 					<div class="fw c content pure-g">
 						<div class="hxl pure-u-xl-1-4">
-							<h1 class="cursor" onclick="previousPost();">
+							<h1 class="cursor" onclick="previousPost();" title="Previous">
 								&#x261c;
 							</h1>
 						</div>
-						<div class="pure-u-1 pure-u-xl-1-2 post" post="1512417320">
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1528319455">
+							<h3>
+								Minamisawa Senri birthday giveaway
+							</h3>
+							<img class="cc mwi" src="./public/img/1528319455.png" />
+							<p>
+								To celebrate my birthday, I am giving away some duplicate Steam keys again. This year the available Steam keys are:
+							</p>
+							<ul class="l">
+								<li>eden*</li>
+								<li>Fault milestone one</li>
+								<li>Fault milestone two side:above</li>
+								<li>Hatoful Boyfriend</li>
+								<li>Highway Blossoms</li>
+								<li>Higurashi When They Cry Hou - Ch.1 Onikakushi</li>
+								<li>HuniePop</li>
+								<li>If My Heart Had Wings</li>
+								<li>KARAKARA</li>
+								<li>Loren The Amazon Princess - Deluxe Edition</li>
+								<li>Root Double -Before Crime * After Days- Xtend Edition</li>
+								<li>RPG Maker VX Ace</li>
+								<li>Sakura Spirit</li>
+								<li>Sunrider Academy</li>
+								<li>Sunrider: Liberation Day - Captain's Edition</li>
+								<li>TyranoBuilder Visual Novel Studio</li>
+							</ul>
+							<p>
+								Escape clauses:
+							</p>
+							<ul class="l">
+								<li>Priority will be granted to Twitter followers who had followed me before the giveaway start (22:00 GMT 7th June). New followers will then be fed the leftovers.</li>
+								<li>All entries should be made before 12:00 GMT 10th June; I will try to match up keys to entrants at this point and will contact winners afterwards with the result.</li>
+								<li>If the game keys do not work then I will not be able to offer an alternative key. As far as I know, they should all be valid keys.</li>
+								<li>I can rig this giveaway as much as I like - I may give some entrants their first choice or otherwise resort to randomisation or optimum pairings.</li>
+							</ul>
+							<p>
+								How to enter:
+							</p>
+							<p>
+								Send me a direct message or mention me in a reply. State your desired game, or give a list in preference order in the case that your top priority choice is taken.
+							</p>
+							<br>
+							<img src="./public/img/sticker30.png" />
+							<br>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1512417320" hidden>
 							<h3>
 								Occultic;Nine Review
 							</h3>
@@ -534,9 +596,11 @@
 						</div>
 						<div class="pure-u-1 pure-u-xl-1-2 post" post="404" hidden>
 							Error. Post is 404, mismatch.
+							<br></br>
+							<img class="cc mwi" src="./public/img/jelly.png" />
 						</div>
 						<div class="hxl pure-u-xl-1-4">
-							<h1 class="cursor" onclick="nextPost();">
+							<h1 class="cursor" onclick="nextPost();" title="Next">
 								&#x261e;
 							</h1>
 						</div>
@@ -596,28 +660,83 @@
 					</div>
 				</div>
 
+				<style>
+				.review {
+					 background-image:url("./pudblic/img/avatar0.jpg")
+				}
+				.review-title {
+			    border-top: 2px solid #19c4dcff;
+			    position: relative;
+					border-left: 2px solid #19c4dcff;
+					border-right: 2px solid #c1101dff;
+					/*margin-left: -2px;
+					margin-right: -2px;*/
+				}
+				.review-title:after {
+				    position: absolute;
+				    left: 50%;
+				    right: 0px;
+				    top: -2px;
+				    border-top: 2px solid #c1101dff;
+				    content: '';
+				}
+				.review-summary {
+					border-left: 2px solid #19c4dcff;
+					border-right: 2px solid #c1101dff;
+					margin-left: -2px;
+					margin-right: -2px;
+				}
+				.review-positive {
+					list-style-image: url("./public/img/positive.svg");
+					border-bottom: 2px solid #19c4dcff;
+					border-left: 2px solid #19c4dcff;
+					border-top: 2px solid #19c4dcff;
+					border-bottom-left-radius: 16px;
+					margin-right: -4px;
+					margin-left: -4px;
+				}
+				.review-negative {
+					list-style-image: url("./public/img/negative.svg");
+					border-right: 2px solid #c1101dff;
+					border-bottom: 2px solid #c1101dff;
+					border-top: 2px solid #c1101dff;
+					border-bottom-right-radius: 16px;
+					margin-right: -4px;
+					margin-left: -4px;
+				}
+				</style>
+
+				<!-- Test page -->
+				<div id="testPage" class="pure-u-1 pure-u-xl-2-3 fh page" page="testPage" hidden>
+					<div class="fw c content pure-g">
+						<div class="pure-u-1-6"></div>
+						<div class="review pure-g pure-u-2-3">
+							<div class="review-title pure-u-1">
+								Placeholder
+							</div>
+							<div class="review-summary pure-u-1">
+								Placeholder
+							</div>
+							<div class="review-positive pure-u-1-2">
+								<ul>
+									<li>Placeholder</li>
+									<li>Placeholder</li>
+									<li>Placeholder</li>
+								</ul>
+							</div>
+							<div class="review-negative pure-u-1-2">
+								<ul>
+									<li>Placeholder</li>
+									<li>Placeholder</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<!-- Project progress page -->
 				<div id="projectProgress" class="pure-u-1 pure-u-xl-2-3 fh page" page="projectProgress" hidden>
 					<div class="pure-g fw c content">
-
-						<!-- Break -->
-						<div class="pure-u-1-1">
-							<br></br>
-						</div>
-
-						<!-- Progress -->
-						<div class="fw">
-							<div class="pure-u-1-2">
-								<progress value="0" max="100" class="fw">
-								</progress>
-							</div>
-							<div class="pure-u-1-8">
-								<span class="pp"/>
-							</div>
-							<div class="pure-u-3-8">
-								Occultic;Nine summary document
-							</div>
-						</div>
 
 						<!-- Break -->
 						<div class="pure-u-1-1">
@@ -643,91 +762,25 @@
 							<br></br>
 						</div>
 
-
 						<!-- Progress -->
 						<div class="fw">
 							<div class="pure-u-1-2">
-								<progress value="100" max="100" class="fw">
-								</progress>
-							</div>
-							<div class="pure-u-1-8">
-								<span class="pp"/>
-							</div>
-							<div class="pure-u-3-8">
-								Chaos;Child LoveChuChu summary document
-							</div>
-
-							<!-- Subprogress --
-							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-4">
-								<progress value="50" max="100" class="fw">
-								</progress>
-							</div>
-							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-8">
-								<span class="pp"/>
-							</div>
-							<div class="pure-u-3-8">
-								Hana route
-							</div>
-
-							<!-- Subprogress --
-							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-4">
 								<progress value="0" max="100" class="fw">
 								</progress>
 							</div>
 							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-8">
 								<span class="pp"/>
 							</div>
 							<div class="pure-u-3-8">
-								Tachibana route
+								Minikui Mojika no Ko summary document
 							</div>
-
-							<!-- Subprogress --
-							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-4">
-								<progress value="0" max="100" class="fw">
-								</progress>
-							</div>
-							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-8">
-								<span class="pp"/>
-							</div>
-							<div class="pure-u-3-8">
-								Hinae route
-							</div>
-
-							<!-- Subprogress --
-							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-4">
-								<progress value="10" max="100" class="fw">
-								</progress>
-							</div>
-							<div class="pure-u-1-8">
-							</div>
-							<div class="pure-u-1-8">
-								<span class="pp"/>
-							</div>
-							<div class="pure-u-3-8">
-								Nono route
-							</div-->
-
-
 						</div>
 
 						<!-- Break -->
 						<div class="pure-u-1-1">
 							<br></br>
 						</div>
+
 					</div>
 				</div>
 
@@ -747,6 +800,8 @@
 				<div id="404" class="pure-u-1 pure-u-xl-2-3 fh page" page="404" hidden>
 					<div class="fw c content">
 						Error. Page is 404, mismatch.
+						<br></br>
+						<img class="cc mwi" src="./public/img/jelly.png" />
 					</div>
 				</div>
 
