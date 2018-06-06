@@ -162,6 +162,34 @@
 			.cursor {
 				cursor:pointer;
 			}
+
+			.hamburger-master {
+				position:fixed;
+				top: 0px;
+				left: 0px;
+				border-radius: 50%;
+				background-color: black;
+				color: white;
+				padding: 1em;
+				width: 1em;
+				height: 1em;
+				margin-left: -1em;
+				margin-top: -1em;
+				vertical-align: middle;
+				text-align: center;
+			}
+
+			.hamburger-slave {
+				display: none;
+			}
+			@media screen and (min-width: 80em) {
+				.hamburger-slave {
+					display: block;
+				}
+				.hamburger-master {
+					display: none;
+				}
+			}
 		</style>
 
 		<!-- Javascript -->
@@ -312,6 +340,20 @@
 			    return decodeURIComponent(results[2].replace(/\+/g, " "));
 			}
 
+			var toggleMobileMenu = function(){
+				var menu = document.getElementsByClassName('hamburger-slave');
+				if(menu[0].style.display === 'block')
+				hideMobileMenu(menu);
+				else
+				showMobileMenu(menu);
+			}
+			var showMobileMenu = function(menu){
+				menu[0].style.display = 'block';
+			}
+			var hideMobileMenu = function(menu){
+				menu[0].style.removeProperty('display');
+			}
+
 			var init = function(){
 				var postId = getParameterByName('post');
 				if(postId){
@@ -356,8 +398,12 @@
 			<!-- Main content -->
 			<div id="main" class="whiteout pure-g fh" hidden>
 
+				<div class="hamburger-master cursor" onclick="toggleMobileMenu();">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
+
 				<!-- Side bar -->
-				<div class="pure-u-1 pure-u-xl-1-6 fh twitter-grey hr">
+				<div class="pure-u-1 pure-u-xl-1-6 fh twitter-grey hr hamburger-slave">
 
 					<!-- Break -->
 					<br></br>
@@ -541,7 +587,7 @@
 								Send me a direct message or mention me in a reply. State your desired game, or give a list in preference order in the case that your top priority choice is taken.
 							</p>
 							<br>
-							<img src="./public/img/sticker30.png" />
+							<img class="cc mwi" src="./public/img/sticker30.png" />
 							<br>
 							<p>
 								- Minamisawa Senri
