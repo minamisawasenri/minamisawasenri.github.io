@@ -373,6 +373,18 @@
 				}
 			}
 
+			var skipPost = function(){
+				var posts = document.getElementsByClassName("post");
+				for(var i = 0; i < posts.length; i++){
+					if(!posts.item(i).hidden){
+						posts.item(i).hidden = true;
+						posts.item(0).removeAttribute("hidden");
+						break;
+					}
+				}
+				setNavigationButtons(false,true);
+			}
+
 			var nextPost = function(){
 				var posts = document.getElementsByClassName("post");
 				var lastItem = false;
@@ -625,21 +637,27 @@
 				<div id="home" class="pure-u-1 pure-u-xl-2-3 fh page" page="home">
 					<div class="fw c content pure-g">
 
-						<div class="ssm pure-u-1-3">
+						<div class="ssm pure-u-1-4">
 							<h1 class="cursor previousButton" onclick="previousPost();" title="Previous">
 								&#x261c;
 							</h1>
 						</div>
-						<div class="ssm pure-u-1-3">
+						<div class="ssm pure-u-1-4">
 							<span class="cursor" onclick="shareLink();" title="Copy share link">
 								<i class="fa fa-link share-margin-offset" aria-hidden="true"></i>
 							</span>
 						</div>
-						<div class="ssm pure-u-1-3">
+						<div class="ssm pure-u-1-4">
+							<span class="cursor nextButton" onclick="skipPost();" title="Newest post" hidden>
+								<i class="fa fa-fast-forward share-margin-offset" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="ssm pure-u-1-4">
 							<h1 class="cursor nextButton" onclick="nextPost();" title="Next" hidden>
 								&#x261e;
 							</h1>
 						</div>
+
 
 						<div class="sxl pure-u-xl-1-4">
 							<h1 class="cursor previousButton" onclick="previousPost();" title="Previous">
@@ -1242,6 +1260,10 @@ Oh
 							<h1 class="cursor nextButton" onclick="nextPost();" title="Next" hidden>
 								&#x261e;
 							</h1>
+							<br>
+							<span class="cursor nextButton" onclick="skipPost();" title="Newest" hidden>
+								<i class="fa fa-fast-forward" aria-hidden="true"></i>
+							</span>
 						</div>
 					</div>
 				</div>
