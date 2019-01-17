@@ -1,1 +1,0 @@
-# minamisawasenri.github.io

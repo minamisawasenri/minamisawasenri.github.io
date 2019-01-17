@@ -1,0 +1,1612 @@
+<html>
+	<head>
+		<!-- Title -->
+		<title>
+			Minamisawa Senri
+		</title>
+
+
+		<link rel="shortcut icon" type="image/png" href="./public/img/favicon.ico"/>
+
+		<!-- Meta headers -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Minamisawa Senri">
+		<meta name="description" content="その目だれの目？">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:title" content="Minamisawa Senri">
+		<meta property="og:description" content="その目だれの目？">
+		<meta property="og:image" content="https://minamisawasenri.com/public/img/bg0.png">
+		<meta property="og:url" content="https://minamisawasenri.com/">
+		<meta name="twitter:card" content="summary_large_image">
+
+		<!-- Twitter widgets -->
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<!-- Pure.CSS stylesheet -->
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+		<!--[if lte IE 8]>
+		    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+		<![endif]-->
+		<!--[if gt IE 8]><!-->
+		    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+		<!--<![endif]-->
+
+		<!-- Font Awesome fonts -->
+		<link rel="stylesheet" href="./public/font-awesome/css/font-awesome.min.css">
+
+		<!-- Custom style -->
+		<style>
+			body {
+				margin: 0;
+				overflow: hidden;
+				background: lavenderblush;
+			}
+
+			body, html {
+				height: 100%;
+			}
+
+			.page {
+				overflow-y: scroll;
+			}
+
+			.parallax {
+				/* The image used */
+				background-image: url("./public/img/bg0.png");
+
+				/* Full height */
+				height: 100%;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.tb {
+				color: darkslategrey;
+			}
+			/* sidebar button */
+			.sb {
+				background-color: rgba(25,30,35,.61);
+				width: 100%
+			}
+			.sb:nth-of-type(2n) {
+				background-color: rgba(160,200,220,.12);
+			}
+			/* center */
+			.c {
+				text-align: center;
+			}
+			/*	left */
+			.l {
+				text-align: left;
+			}
+			/* large */
+			.lg {
+				font-size: 400%;
+			}
+			/* small */
+			.sm {
+				font-size: 50%;
+			}
+			/* full height */
+			.fh {
+				height: 100%;
+			}
+			.fw {
+				width: 100%;
+			}
+			[id^='twitter-widget-'] {
+				height: 100% !important;
+			}
+
+
+			/* show sm */
+			.ssm {
+				display: none;
+			}
+
+			@media screen and (max-width: 80em) {
+				/* height reset */
+				.hr {
+					height: initial;
+				}
+				/* show xl */
+				.sxl {
+					display: none;
+				}
+				/* show sm */
+				.ssm {
+					display: block;
+				}
+			}
+
+
+
+			.whiteout {
+				background: #fff0f5a0;
+			}
+			.content {
+			padding: 16px;
+				margin: 32px;
+				width: calc(100% - 96px);
+				background: white;
+				border-radius: 4px;
+				box-shadow: 0px 0px 16px rgba(100,100,100,.5);
+			}
+			.twitter-grey {
+				background: rgb(41, 47, 51);
+				color: rgb(245, 248, 250);
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+			.twitter-grey:last-of-type {
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px;
+			}
+			.twitter-grey a:link,
+			.twitter-grey a:visited,
+			.twitter-grey a:hover,
+			.twitter-grey a:active {
+				color: rgb(245, 248, 250);
+			}
+			/* padding */
+			.p {
+				padding: 4px;
+			}
+			/* curved corners */
+			.cc {
+				border-radius: 10px;
+			}
+			/* max width image */
+			.mwi {
+				max-width: 400px;
+				width: 100%;
+			}
+
+			/* share margin offset */
+			.share-margin-offset {
+				margin: 2.33em 0 0 0;
+			}
+
+			.cursor {
+				cursor:pointer;
+				-webkit-touch-callout: none;
+    		-webkit-user-select: none;
+     		-khtml-user-select: none;
+       	-moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+			}
+
+			.hamburger-master {
+				position:fixed;
+				top: 0px;
+				left: 0px;
+				border-radius: 50%;
+				background-color: black;
+				color: white;
+				padding: 1em;
+				width: 1em;
+				height: 1em;
+				margin-left: -1em;
+				margin-top: -1em;
+				vertical-align: middle;
+				text-align: center;
+			}
+
+			.hamburger-slave {
+				display: none;
+			}
+			@media screen and (min-width: 80em) {
+				.hamburger-slave {
+					display: block;
+				}
+				.hamburger-master {
+					display: none;
+				}
+			}
+		</style>
+		<script>
+			var shareLink = function(){
+				var posts = document.getElementsByClassName("post");
+				for(var i = 0; i < posts.length; i++){
+					if(!posts.item(i).hidden){
+						var id = posts.item(i).getAttribute('post');
+						if(id){
+							var link = [location.protocol, '//', location.host,
+								location.pathname, '?post=', id].join('')
+							copyLink(link);
+						}
+					}
+				}
+			}
+			var copyLink = function(string){
+				//create a new text area element
+			  var temp = document.createElement('textarea');
+			  temp.value = string;
+			  temp.setAttribute('readonly', '');
+			  temp.style.position = 'absolute';
+			  temp.style.left = '-9999px';
+			  document.body.appendChild(temp);
+
+			  var selected =
+			    document.getSelection().rangeCount > 0
+			      ? document.getSelection().getRangeAt(0)
+			      : false;
+			  temp.select();
+
+			  document.execCommand('copy');
+			  document.body.removeChild(temp);
+
+			  if (selected) {
+			    document.getSelection().removeAllRanges();
+			    document.getSelection().addRange(selected);
+			  }
+			};
+		</script>
+
+		<!-- Javascript -->
+		<script>
+			var setCookie = function(name,value,expiry){
+				//get the current date
+				var date = new Date();
+				//get the expiry date by adding the required number of days
+				date.setDate(date.getDate() + expiry);
+				//create the expires and path string
+				var cookie = "expires=" + date.toUTCString() + ";path=/";
+				//add the name and value to the cookie
+				cookie = name + "=" + value + ";" + cookie;
+				//set the cookie
+				document.cookie = cookie;
+			}
+
+			var getCookie = function(name){
+				//get the cookies
+				var cookies = document.cookie;
+				//split into individual cookies
+				var split = cookies.split(';');
+
+				//loop through each cookie
+				for(var i = 0; i < split.length; i++){
+					//trim the cookie string
+					var trim = split[i].trim()
+					//check to see if the name matches
+					if(trim.indexOf(name) === 0
+						&& trim.indexOf('=') === name.length){
+						//return the value of the cookie
+						return trim.substring(name.length + 1, trim.length);
+					}
+				}
+				//if none matched, return undefined
+				return undefined;
+			}
+
+			var showCookies = function(){
+				document.getElementById("cookie").removeAttribute("hidden");
+			}
+
+			var showSite = function(){
+				document.getElementById("cookie").remove();
+				document.getElementById("main").removeAttribute("hidden");
+			}
+
+			var cc = function(){
+				return (getCookie('allowCookies'));
+			}
+
+			var acceptCookiesFunc = function(){
+				setCookie('allowCookies','true',720);
+				showSite();
+			}
+
+			var checkCookiesFunc = function(){
+				if(cc()){
+					getPage();
+					showSite();
+				}
+				else{
+					showCookies();
+				}
+			}
+
+			var setPageFunc = function(page){
+				if(cc()){
+					setCookie('page',page,720);
+				}
+				togglePage(page);
+			}
+
+			var getPage = function(){
+				if(cc()){
+					var page = getCookie('page');
+					if(page){
+						setPageFunc(page);
+					}
+				}
+			}
+
+			var togglePage = function(page){
+				var pages = document.getElementsByClassName("page");
+				for(var i = 0; i < pages.length; i++){
+					pages.item(i).hidden = true;
+				}
+				var element = document.querySelector('[page="'+page+'"]');
+				if(element){
+					element.removeAttribute("hidden");
+				}
+				else if(page !== '404'){
+					togglePage('404');
+				}
+			}
+
+			var updateProgressPercent = function(){
+				var progress = document.getElementsByTagName("progress");
+				var percentage = document.getElementsByClassName("pp");
+				for(var i = 0; i < progress.length, i < percentage.length; i++){
+					percentage[i].innerHTML = progress[i].value + '%';
+				}
+			}
+
+			var togglePost = function(post){
+				var posts = document.getElementsByClassName("post");
+				var firstItem = undefined;
+				var lastItem = undefined;
+				for(var i = 0; i < posts.length; i++){
+					i === 0 ? firstItem = posts.item(i).getAttribute("post") : false;
+					i === posts.length - 2 ? lastItem = posts.item(i).getAttribute("post") : false;
+					posts.item(i).hidden = true;
+				}
+				var element = document.querySelector('[post="'+post+'"]');
+				if(element){
+					element.removeAttribute("hidden");
+					setNavigationButtons(post === lastItem,post === firstItem);
+				}
+				else if(post !== '404'){
+					togglePost('404');
+					setNavigationButtons(true);
+				}
+			}
+
+			var skipPost = function(){
+				var posts = document.getElementsByClassName("post");
+				for(var i = 0; i < posts.length; i++){
+					if(!posts.item(i).hidden){
+						posts.item(i).hidden = true;
+						posts.item(0).removeAttribute("hidden");
+						break;
+					}
+				}
+				setNavigationButtons(false,true);
+			}
+
+			var nextPost = function(){
+				var posts = document.getElementsByClassName("post");
+				var lastItem = false;
+				for(var i = 0; i < posts.length; i++){
+					if(!posts.item(i).hidden){
+						posts.item(i).hidden = true;
+						posts.item(Math.max(0,i-1)).removeAttribute("hidden");
+						lastItem = (i-1 <= 0);
+						break;
+					}
+				}
+				setNavigationButtons(false,lastItem);
+			}
+			var previousPost = function(){
+				var posts = document.getElementsByClassName("post");
+				var firstItem = false;
+				for(var i = 0; i < posts.length; i++){
+					if(!posts.item(i).hidden){
+						posts.item(i).hidden = true;
+						posts.item(Math.min(i+1,posts.length-1)).removeAttribute("hidden");
+						firstItem = (i+1 >= posts.length-2);
+						break;
+					}
+				}
+				setNavigationButtons(firstItem);
+			}
+
+			var setNavigationButtons = function(hidePrevious,hideNext){
+				var previousButtons = document.getElementsByClassName("previousButton");
+				for(var i = 0; i < previousButtons.length; i++){
+					hidePrevious ? previousButtons.item(i).style = "visibility: hidden;"
+						: previousButtons.item(i).removeAttribute("style");
+				}
+				var nextButtons = document.getElementsByClassName("nextButton");
+				for(var i = 0; i < nextButtons.length; i++){
+					hideNext ? nextButtons.item(i).hidden = true
+						: nextButtons.item(i).removeAttribute("hidden");
+				}
+			}
+
+			//stolen func wwwwwww
+			function getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+
+			var toggleMobileMenu = function(){
+				var menu = document.getElementsByClassName('hamburger-slave');
+				if(menu[0].style.display === 'block')
+				hideMobileMenu(menu);
+				else
+				showMobileMenu(menu);
+			}
+			var showMobileMenu = function(menu){
+				menu[0].style.display = 'block';
+			}
+			var hideMobileMenu = function(menu){
+				menu[0].style.removeProperty('display');
+			}
+
+			var init = function(){
+				var postId = getParameterByName('post');
+				if(postId){
+					togglePage("home");
+					togglePost(postId);
+				}
+			};
+			document.addEventListener("DOMContentLoaded", init);
+		</script>
+	</head>
+
+
+	<body onload="checkCookiesFunc(); updateProgressPercent();">
+
+		<!-- Background -->
+		<div class="parallax">
+
+			<!-- Cookie checker -->
+			<div id="cookie" class="pure-g fh" hidden>
+				<div class="sxl pure-u-xl-1-3">
+				</div>
+				<div class="pure-u-1 pure-u-xl-1-3">
+					<br></br>
+					<div class="twitter-grey c">
+						<br></br>
+						<div class="p">
+							This website uses cookies for various nefarious reasons.
+						</div>
+						<br></br>
+						<img class="cc mwi" src="./public/img/cookies.png" />
+						<br></br>
+						<a class="pure-button" onclick="acceptCookiesFunc();">
+							Allow cookies
+						</a>
+						<br></br>
+					</div>
+				</div>
+				<div class="sxl pure-u-xl-1-3">
+				</div>
+			</div>
+
+			<!-- Main content -->
+			<div id="main" class="whiteout pure-g fh" hidden>
+
+				<div class="hamburger-master cursor" onclick="toggleMobileMenu();">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
+
+				<!-- Side bar -->
+				<div class="pure-u-1 pure-u-xl-1-6 fh twitter-grey hr hamburger-slave">
+
+					<!-- Break -->
+					<br></br>
+
+					<!-- Title -->
+					<h1 class="c">
+						Minamisawa Senri
+					</h1>
+					<h1 class="c">
+						南沢泉理
+					</h1>
+
+					<!-- Break -->
+					<br></br>
+
+					<!-- Brand link icons -->
+					<div class="pure-g c">
+
+						<!-- Twitter -->
+						<div class="pure-u-1-3">
+							<a href="https://twitter.com/MinamisawaSenri" target="_blank" title="Twitter">
+								<i class="fa fa-twitter-square lg" aria-hidden="true">
+								</i>
+							</a>
+						</div>
+
+						<!-- Tumblr -->
+						<div class="pure-u-1-3">
+							<a href="https://nishijoutakumi.tumblr.com" target="_blank" title="Tumblr">
+								<i class="fa fa-tumblr-square lg" aria-hidden="true">
+								</i>
+							</a>
+						</div>
+
+						<!-- Steam -->
+						<div class="pure-u-1-3">
+							<a href="https://steamcommunity.com/profiles/76561198040793707 " target="_blank" title="Steam">
+								<i class="fa fa-steam-square lg" aria-hidden="true">
+								</i>
+							</a>
+						</div>
+
+					</div>
+
+					<!-- Break -->
+					<br></br>
+
+					<!-- Side links -->
+					<div>
+
+						<!-- Home -->
+						<a class="pure-button sb pure-g" href="#" onclick="setPageFunc('home');">
+							<div class="pure-u-1-4">
+								<i class="fa fa-home" aria-hidden="true">
+								</i>
+							</div>
+							<div class="pure-u-3-4">
+								Home
+							</div>
+						</a>
+
+						<!-- About -->
+						<a class="pure-button sb pure-g" href="#" onclick="setPageFunc('about');">
+							<div class="pure-u-1-4">
+							<i class="fa fa-info" aria-hidden="true">
+							</i>
+							</div>
+							<div class="pure-u-3-4">
+							About
+							</div>
+						</a>
+
+						<!-- Summary documents -->
+						<a class="pure-button sb pure-g" href="#" onclick="setPageFunc('summaryDocuments');">
+							<div class="pure-u-1-4">
+							<i class="fa fa-book" aria-hidden="true">
+							</i>
+							</div>
+							<div class="pure-u-3-4">
+							Summary documents
+							</div>
+						</a>
+
+						<!-- Project progress -->
+						<a class="pure-button sb pure-g" href="#" onclick="setPageFunc('projectProgress');">
+							<div class="pure-u-1-4">
+							<i class="fa fa-tasks" aria-hidden="true">
+							</i>
+							</div>
+							<div class="pure-u-3-4">
+							Project progress
+							</div>
+						</a>
+
+						<!-- Timeline -->
+						<a class="pure-button sb pure-g" href="./timeline">
+							<div class="pure-u-1-4">
+							<i class="fa fa-clock-o" aria-hidden="true">
+							</i>
+							</div>
+							<div class="pure-u-3-4">
+							Timeline
+							</div>
+						</a>
+
+						<!-- Live -->
+						<!--a class="pure-button sb pure-g" href="#" onclick="setPageFunc('live');">
+							<div class="pure-u-1-4">
+							<i class="fa fa-video-camera" aria-hidden="true">
+							</i>
+							</div>
+							<div class="pure-u-3-4">
+							Live
+							</div>
+						</a-->
+
+						<!-- Tarot -->
+						<!--a class="pure-button sb pure-g" href="#" onclick="setPageFunc('tarot');">
+							<div class="pure-u-1-4">
+							<span class="fa-stack sm">
+							  <i class="fa fa-microchip fa-stack-2x"></i>
+							  <i class="fa fa-globe fa-stack-1x tb"></i>
+							  </span>
+							</div>
+							<div class="pure-u-3-4">
+							Tarot
+							</div>
+						</a-->
+
+					</div>
+
+				</div>
+
+				<!-- Home page -->
+				<div id="home" class="pure-u-1 pure-u-xl-2-3 fh page" page="home">
+					<div class="fw c content pure-g">
+
+						<div class="ssm pure-u-1-4">
+							<h1 class="cursor previousButton" onclick="previousPost();" title="Previous">
+								&#x261c;
+							</h1>
+						</div>
+						<div class="ssm pure-u-1-4">
+							<span class="cursor" onclick="shareLink();" title="Copy share link">
+								<i class="fa fa-link share-margin-offset" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="ssm pure-u-1-4">
+							<span class="cursor nextButton" onclick="skipPost();" title="Newest post" hidden>
+								<i class="fa fa-fast-forward share-margin-offset" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div class="ssm pure-u-1-4">
+							<h1 class="cursor nextButton" onclick="nextPost();" title="Next" hidden>
+								&#x261e;
+							</h1>
+						</div>
+
+
+						<div class="sxl pure-u-xl-1-4">
+							<h1 class="cursor previousButton" onclick="previousPost();" title="Previous">
+								&#x261c;
+							</h1>
+							<br>
+							<span class="cursor" onclick="shareLink();" title="Copy share link">
+								<i class="fa fa-link" aria-hidden="true"></i>
+							</span>
+						</div>
+
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1543965666">
+							<h3>
+								Chaos;Child Drama CD - Prologue - the Day of the Beginning
+							</h3>
+							<br>
+							<img class="cc mwi" src="./public/img/1543965666.jpg" />
+							<br></br>
+							<p>
+								This short Drama was released with the original Xbox One opening/ending single CD.
+							</p>
+							<p>
+								The prologue explores some of the early days of the Newspaper Club, although at moments it turns bittersweet.
+							</p>
+							<p>
+								My thanks go out to Mouse (<a href="https://twitter.com/5zzb" target="_blank">@5zzb</a>) for giving me a Japanese transcript to work from.
+							</p>
+							<p>
+								<a href="https://docs.google.com/spreadsheets/d/12M9VzbTDRwTUFCSp-F47bEg01KmoOMuK2LdisNXVBlI/edit?usp=sharing" target="_blank">
+									You can view the translation here.
+								</a>
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1543268900" hidden>
+							<h3>
+								Chaos;Child Drama CD - Far too late - slumbering Fools
+							</h3>
+							<br>
+							<img class="cc mwi" src="./public/img/1543268900.jpg" />
+							<br></br>
+							<p>
+								This is the big one. This Drama CD was part of the Playstation limited edition release.
+							</p>
+							<p>
+								The main character of this story is Mio. We travel into her past, to investigate the reason as to why she harbours a deep hatred for all Gigalomaniacs.
+							</p>
+							<p>
+								<strong>
+									Major spoilers for the ending of Chaos;Child lie inside, along with minor Steins;Gate spoilers.
+								</strong>
+							</p>
+							<p>
+								<a href="https://docs.google.com/spreadsheets/d/12M9VzbTDRwTUFCSp-F47bEg01KmoOMuK2LdisNXVBlI/edit?usp=sharing" target="_blank">
+									You can view the translation here.
+								</a>
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1540676700" hidden>
+							<h3>
+								Chaos;Child Drama CD - Investigating the mysterious 'Seven Wonders of Shibuya'
+							</h3>
+							<br>
+							<img class="cc mwi" src="./public/img/1540676700.jpg" />
+							<br></br>
+							<p>
+								Time for the second Drama CD from the DVD/BD releases.
+							</p>
+							<p>
+								This focuses on Hinae - at the weekend, Hinae 'persuades' Taku to help her investigate the 'Seven Wonders of Shibuya', as research for a story.
+							</p>
+							<p>
+								<a href="https://docs.google.com/spreadsheets/d/12M9VzbTDRwTUFCSp-F47bEg01KmoOMuK2LdisNXVBlI/edit?usp=sharing" target="_blank">
+									You can view the translation here.
+								</a>
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1538423180" hidden>
+							<h3>
+								Chaos;Child Drama CD - The Right-sider and a certain day off
+							</h3>
+							<br>
+							<img class="cc mwi" src="./public/img/1538423180.jpg" />
+							<br></br>
+							<p>
+								Onto the first of the Drama CDs from the DVD/BD releases.
+							</p>
+							<p>
+								The story for today focuses on Nono - whilst out shopping with Nono and Yui, Takuru's powerful delusions take hold once more.
+							</p>
+							<p>
+								Note, I am using the artwork which corresponds to the character featured in the Drama CD, not the artwork that appeared with the Drama CD.
+								They wanted main girl on the first release so everything got shifted back one.
+							</p>
+							<p>
+								<a href="https://docs.google.com/spreadsheets/d/12M9VzbTDRwTUFCSp-F47bEg01KmoOMuK2LdisNXVBlI/edit?usp=sharing" target="_blank">
+									You can view the translation here.
+								</a>
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1537729040" hidden>
+							<h3>
+								Chaos;Child Drama CD - The narrow path off the beaten track
+							</h3>
+							<p>
+								Time to start up translating Chaos;Child content once more. Here for you today is the script of the Comiket 91 Drama CD.
+							</p>
+							<p>
+								The story revolves around the Newspaper Club trip to a traditional Japanese inn, complete with onsen. Various activities may or may not occur, depending on the delusion you desire.
+							</p>
+							<p>
+								As I have limited video skills; for now it is just a script. I aim to try for one Drama CD each week, starting next on the BD/DVD bonuses.
+							</p>
+							<p>
+								<a href="https://docs.google.com/spreadsheets/d/12M9VzbTDRwTUFCSp-F47bEg01KmoOMuK2LdisNXVBlI/edit?usp=sharing" target="_blank">
+									You can view the translation here.
+								</a>
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+
+
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1534456000" hidden>
+							<h3>
+								Minikui Mojika no Ko - overview and lyrics
+							</h3>
+							<p>
+								Minikui Mojika no Ko focuses on making you and the characters suffer. It is devoid of any light scenes, the sex scenes are bitter and glimmers of hope are quickly snuffed out.
+							</p>
+							<p>
+								A quick overview of the premise. The protagonist, Tanezaki Suteru, is the ugliest person in the world. Having gained a spot in one of the most prestigious schools in the country, he faces daily bullying from the rest of his class. However, he has a special ability/curse; when he gazes at the faces of others, he can read their hearts, with words materialising beside them - Mojika. After another bullied member of his class is forced to falsely confess their love for him, he decides to use his powers to escape and take revenge.
+							</p>
+							<p>
+								The majority of the game is spent with your gaze directed towards the ground; to objects lying on the floor and the feet of others. The art style focuses on realism and works well with the story themes. Choices are made through deciding when to look up and to use the power of the Mojika. The majority of the main routes are easy to navigate to, but the true route takes a bit more effort (fortunately, there are hints in the stub endings to guide you on your way).
+							</p>
+							<p>
+								If you enjoy reading stories which abuse your feelings, make you uncomfortable and have harsh endings, look no further.
+							</p>
+							<br>
+							<iframe class="cc" style="width: 100%; max-height: 50vh; height: 100vh;" src="https://www.youtube-nocookie.com/embed/ms9MTSs438o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<br></br>
+							<p>
+								I have translated the lyrics to the opening and ending songs.
+							</p>
+							<p>
+								<a href="?post=1534455999">
+									Opening - 憐 (Pitiful)
+								</a>
+							</p>
+							<p>
+								<a href="?post=1534455888">
+									Ending - 空 (Sky)
+								</a>
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+
+
+
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1534455999" hidden>
+							<h3>
+								憐 (Pitiful) lyrics
+							</h3>
+							<br>
+							<img class="cc mwi" src="./public/img/1534455999.png" />
+							<br></br>
+							<p>
+								The opening song for Minikui Mojika no Ko. Note: in part, it seems to reference a poem; "Du bist wie eine Blume". If you were not sure how much suffering is involved in the story, this may help clarify.
+							</p>
+							<br>
+							<hr>
+							<br>
+							<strong>Kanji Ver. - 憐</strong>
+							<br></br>
+							<pre class="l">
+ああ　絶望さえ
+ああ　甘く響いた
+瓦礫さえも　花のようだ
+ただ悲しく
+
+ああ　傷跡まで
+ああ　甘い想い出
+完璧まで　遥か遠く
+ただ悲しく
+
+美しい声　聴こえめても
+残酷に痛みだけ刺さる
+醜い声　視えたとして
+ただ悲しく
+
+ああ　壊れる音
+ああ　甘い調べ
+望んだ時　夢見ている
+ただ悲しく
+
+消えない意識　振りほどいて
+とりとめに虚しさだけ抱いて
+刹那の景色　頬撫でた
+ただ悲しく
+
+美しい声　聴こえめても
+残酷に痛みだけ刺さる
+醜い声　視えたとして
+ただ悲しく
+
+可憐
+							</pre>
+							<br>
+							<hr>
+							<br>
+							<strong>Romaji Ver. - aware</strong>
+							<br></br>
+							<pre class="l">
+aa, zetsubou sae
+aa, amaku hibiita
+gareki sae mo, hana no you da
+tada kanashiku
+
+aa, kizuato made
+aa, amai omoide
+kanpeki made haruka tooku
+tada kanashiku
+
+utsukushii koe kikoemete mo
+zankoku ni itami dake sasaru
+minikui koe mieta toshite
+tada kanashiku
+
+aa, kowareru oto
+aa, amai shirabe
+nozonda toki yume miteiru
+tada kanashiku
+
+kienai ishiki furi hodoite
+toritomeni munashisa dake daite
+setsuna no keshiki hoho nadeta
+tada kanashiku
+
+utsukushii koe kikoemete mo
+zankoku ni itami dake sasaru
+minikui koe mieta toshite
+tada kanashiku
+
+karen
+							</pre>
+							<br>
+							<hr>
+							<br>
+							<strong>English Ver. - Pitiful</strong>
+							<br></br>
+							<pre class="l">
+Ah, even the depths of despair
+Ah, the sweet reverberations
+Even the rubble invokes the same feeling as the flowers
+'tis merely sadness
+
+Ah, until scars remain
+Ah, the sweet memories
+Until perfection is reached; so distant, so far
+'tis merely sadness
+
+Even though I can hear your beautiful voice
+I am cruelly stricken with suffering
+As I can gaze at your ugly voice
+'tis merely sadness
+
+Ah, the sounds of breaking
+Ah, the sweet observations
+The times I longed for can only be seen within my dreams
+'tis merely sadness
+
+Relinquish me from this unwavering awareness
+Let me embrace only meaningless nothingness
+This ephemeral scenery; as you caress my face
+'tis merely sadness
+
+Even though I can hear your beautiful voice
+I am cruelly stricken with suffering
+As I can gaze at your ugly voice
+'tis merely sadness
+
+How pitiful
+							</pre>
+							<br>
+							<hr>
+							<br>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1534455888" hidden>
+							<h3>
+								空 (Sky) lyrics
+							</h3>
+							<br>
+							<img class="cc mwi" src="./public/img/1534455888.png" />
+							<br></br>
+							<p>
+								The ending song for Minikui Mojika no Ko. A tad spoilery, if you read between the lines. Or the Mojika.
+							</p>
+							<br>
+							<hr>
+							<br>
+							<strong>Kanji Ver. - 空</strong>
+							<br></br>
+							<pre class="l">
+冷たい空　見上げている
+ねぇ　ねぇ 　ねぇ
+冷たい風　美しくて
+ねぇ　ねぇ 　ねぇ
+
+あなたの嘘　ホントになれば
+わたしの罪　溶け消えるかな？
+繋いだ手の温もりだけが
+ねぇ　ねぇ 　ねぇ
+
+終わりなんてあっけないね
+ねぇ　ねぇ 　ねぇ
+
+わたしの嘘　ホントになれば
+あなたの罪　溶け消えるかな？
+繋いだ手の温もりだけが
+ねぇ　ねぇ 　ねぇ
+
+ふたりの星　輪廻の如く
+ふたりの雪　記憶の彼方
+新しい命　足跡になれ
+ねぇ　ねぇ 　ねぇ
+ねぇ　ねぇ
+ねぇ
+							</pre>
+							<br>
+							<hr>
+							<br>
+							<strong>Romaji Ver. - sora</strong>
+							<br></br>
+							<pre class="l">
+tsumetai sora miagete iru
+ne ne ne
+tsumetai kaze utsukushikute
+ne ne ne
+
+anata no uso honto ni nareba
+watashi no tsumi tokekieru kana?
+tsunaida te no nukumori dake ga
+ne ne ne
+
+owari nante akkenai ne
+ne ne ne
+
+watashi no uso honto ni nareba
+anata no tsumi tokekieru kana?
+tsunaida te no nukumori dake ga
+ne ne ne
+
+futari no hoshi rinne no gotoku
+futari no yuki kioku no kanata
+atarashii inochi ashiatto ni nare
+ne ne ne
+ne ne
+ne
+							</pre>
+							<br>
+							<hr>
+							<br>
+							<strong>English Ver. - Sky</strong>
+							<br></br>
+							<pre class="l">
+Gazing up into the cold sky
+Oh, oh, oh
+The cold wind, in all its beauty
+Oh, oh, oh
+
+If your lies were to become reality
+Would my sins be swept away?
+To leave only the warmth in our intertwined hands
+Oh, oh, oh
+
+The end cannot claim us here
+Oh, oh, oh
+
+If my lies were to become reality
+Would your sins be swept away?
+To leave only the warmth in our intertwined hands
+Oh, oh, oh
+
+Our stars, within the cycle of rebirth
+Our snow, the depths of our memories
+Unto the new life, becoming the footprint we leave behind
+Oh, oh, oh
+Oh, oh
+Oh
+							</pre>
+							<br>
+							<hr>
+							<br>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1530398689" hidden>
+							<h3>
+								Chaos;Child - Fake Sky End
+							</h3>
+							<br>
+							<iframe class="cc" style="width: 100%; max-height: 50vh; height: 100vh;" src="https://www.youtube-nocookie.com/embed/E4_QJnUb_bI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<br></br>
+							<p>
+								In the final release of Chaos;Child, Nono did not have a bad ending route.
+								Said bad ending was cut from the final game but the files still exist in a broken state (the script crashes if you run it, sound effects are missing and so on).
+								The bad end splits after Senri reveals her true form and Serika dies.
+								Having returned to school, Senri decides to visit the grave of Nono; this time without inviting Takuru.
+								After visiting the grave and receiving ghostly encouragement, Senri turns to head home…
+							</p>
+							<br>
+							<hr>
+							<br>
+							<style>
+								dl da {
+									float: left;
+									text-align: left;
+									width: 25%;
+									font-weight: bold;
+								}
+								dl ds {
+									float: left;
+									text-align: left;
+									width: 75%;
+								}
+								dl dn {
+									float: left;
+									text-align: left;
+									margin-left: 25%;
+									width: 75%;
+								}
+								dl br {
+									width: 100%;
+									display: block;
+									margin-top: 1em;
+									margin-bottom: 1em;
+								}
+							</style>
+							<dl>
+								<dn>I felt the presence of someone, standing behind me.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>Mmn?</ds>
+								<br></br>
+
+								<dn>As I turned around to see their face, they too moved.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>Huh?</ds>
+								<br></br>
+
+								<dn>I feel a stabbing heat in my belly.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>Ugh…</ds>
+								<br></br>
+
+								<dn>I could not grasp what had happened.</dn>
+								<dn>As I jaggedly lowered my gaze downwards, for some reason there was something piercing my clothes and stomach, covered in red.</dn>
+								<dn>Such an abnormal scene.</dn>
+								<dn>This is…?</dn>
+								<dn>Why did…?</dn>
+								<dn>From the end of a handle, crimson stains spread across my uniform.</dn>
+								<br></br>
+
+								<da>Kawahara</da><ds>It’s your…</ds>
+								<da>Senri</da><ds>Kawahara...?</ds>
+								<da>Kawahara</da><ds>Everything… is your fault.</ds>
+								<br></br>
+
+								<dn>Kawahara stands before me.</dn>
+								<dn>With both trembling hands extended out to the handle, he watches.</dn>
+								<br></br>
+
+								<da>Kawahara</da><ds>Minamisawa. It’s all your fault.</ds>
+								<da>Senri</da><ds>Why?</ds>
+								<da>Kawahara</da><ds>Kurusu has disappeared. You, who should be dead, suddenly showed up.</ds>
+								<br></br>
+
+								<dn>Kawahara stared off past me, chanting to himself.</dn>
+								<br></br>
+
+								<da>Kawahara</da><ds>Strange, is it not?</ds>
+								<da>Senri</da><ds>Kawahara…</ds>
+								<da>Kawahara</da><ds>It’s you. It’s all your fault. It’s all your fault Kurusu has disappeared…</ds>
+								<da>Kawahara</da><ds>Where are you? Give her back! Give me back my Nono…</ds>
+								<br></br>
+
+								<dn>As the puddle at my feet swells ever larger, I feel the heat of my body flow out alongside.</dn>
+								<dn>As if a gust of wind had blown straight through the hole to cool me down.</dn>
+								<br></br>
+
+								<da>Kawahara</da><ds>Give her back… Nono… Give me back my Nono!</ds>
+								<br></br>
+
+								<dn>Kawahara collapsed where he stood, gazing off into the distance whilst murmuring onwards to himself.</dn>
+								<dn>I…</dn>
+								<br></br>
+
+								<da>Senri</da><ds>Ugh…</ds>
+								<br></br>
+
+								<dn>I raised my foot, as heavy as lead, and took a step forward.</dn>
+								<dn>Forwards.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>I have to… get back.</ds>
+								<br></br>
+
+								<dn>Forwards.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>I have to get back…</ds>
+								<br></br>
+
+								<dn>Forwards.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>Takuru made us all tea... He is waiting for me…</ds>
+								<br></br>
+
+								<dn>Unable to stem the blood leaking from the wound, I feel my limbs grow colder still.</dn>
+								<dn>Even so, I…</dn>
+								<br></br>
+
+								<da>Senri</da><ds>I will get home.</ds>
+								<br></br>
+
+								<dn>Because.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>Back to them…</ds>
+								<br></br>
+
+								<dn>They are waiting for me.</dn>
+								<br></br>
+
+								<da>Senri</da><ds>Everyone is waiting… for me…</ds>
+								<br></br>
+
+								<dn>Strange…</dn>
+								<dn>The blue sky of minutes before had been engulfed in clouds.</dn>
+								<dn>At some point, the colour had drained from this world, turning it white and black.</dn>
+								<dn>Even so.</dn>
+								<dn>Another step forwards.</dn>
+								<dn>Forwards.</dn>
+								<dn>Forwards…</dn>
+								<br></br>
+
+								<da>Senri</da><ds>I have to… get… home…</ds>
+								<br></br>
+							</dl>
+							<hr>
+							<br>
+							<dl>
+								<da>Yuto</da><ds>Sis still hasn’t come home.</ds>
+								<da>Uki</da><ds>I wonder what happened.</ds>
+								<da>Takuru</da><ds>She’s just a bit slow is all. She’s probably heading back now.</ds>
+								<br></br>
+
+								<dn>The thread of murders linked to us are all over now.</dn>
+								<dn>Unlike before, we have nothing dangerous left to be worried about.</dn>
+								<br></br>
+
+								<da>Yuto</da><ds>Hey, I’m really hungry.</ds>
+								<da>Uki</da><ds>Not yet. We have to wait for Senri.</ds>
+								<da>Yuto</da><ds>OK.</ds>
+								<br></br>
+
+								<dn>Having said that…</dn>
+								<br></br>
+
+								<da>Takuru</da><ds>Senri sure is late.</ds>
+								<br></br>
+
+								<dn>I had even gone out to buy her favourite cake especially for her.</dn>
+								<br></br>
+
+								<da>Uki</da><ds>Huh?</ds>
+								<da>Takuru</da><ds>What’s up?</ds>
+								<da>Uki</da><ds>A siren?</ds>
+								<da>Yuto</da><ds>An ambulance? Or is it the police?</ds>
+								<da>Uki</da><ds>I’m not sure… I wonder if something happened.</ds>
+								<da>Takuru</da><ds>Either-or, doesn’t change anything.</ds>
+								<br></br>
+
+								<dn>I look up at the clock.</dn>
+								<dn>It’s already 8.</dn>
+								<br></br>
+
+								<da>Takuru</da><ds>Senri… She sure is late…</ds>
+								<br></br>
+							</dl>
+							<hr>
+							<br>
+							<p>
+								Senri did not deserve to die again.
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1528319455" hidden>
+							<h3>
+								Minamisawa Senri birthday giveaway
+							</h3>
+							<img class="cc mwi" src="./public/img/1528319455.png" />
+							<p>
+								To celebrate my birthday, I am giving away some duplicate Steam keys again. This year the available Steam keys are:
+							</p>
+							<ul class="l">
+								<li>eden*</li>
+								<li>Fault milestone one</li>
+								<li>Fault milestone two side:above</li>
+								<li>Hatoful Boyfriend</li>
+								<li>Highway Blossoms</li>
+								<li>Higurashi When They Cry Hou - Ch.1 Onikakushi</li>
+								<li>HuniePop</li>
+								<li>If My Heart Had Wings</li>
+								<li>KARAKARA</li>
+								<li>Loren The Amazon Princess - Deluxe Edition</li>
+								<li>Root Double -Before Crime * After Days- Xtend Edition</li>
+								<li>RPG Maker VX Ace</li>
+								<li>Sakura Spirit</li>
+								<li>Sunrider Academy</li>
+								<li>Sunrider: Liberation Day - Captain's Edition</li>
+								<li>TyranoBuilder Visual Novel Studio</li>
+							</ul>
+							<p>
+								Escape clauses:
+							</p>
+							<ul class="l">
+								<li>Priority will be granted to Twitter followers who had followed me before the giveaway start (07:00 GMT 7th June). New followers will then be fed the leftovers.</li>
+								<li>All entries should be made before 12:00 GMT 10th June; I will try to match up keys to entrants at this point and will contact winners afterwards with the result.</li>
+								<li>If the game keys do not work then I will not be able to offer an alternative key. As far as I know, they should all be valid keys.</li>
+								<li>I can rig this giveaway as much as I like - I may give some entrants their first choice or otherwise resort to randomisation or optimum pairings.</li>
+							</ul>
+							<p>
+								How to enter:
+							</p>
+							<p>
+								Send me a direct message on Twitter or mention me in a reply. State your desired game, or give a list in preference order in the case that your top priority choice is taken.
+							</p>
+							<br>
+							<img class="cc mwi" src="./public/img/sticker30.png" />
+							<br>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1512417320" hidden>
+							<h3>
+								Occultic;Nine Review
+							</h3>
+							<p>
+								Heading into the Occultic;Nine game, I was hoping for a Noah-style adaptation to improve on the base. Having watched the anime and read the first two light novels, I had found the core story and concepts good but felt that some of the side characters required some more expansion.
+							</p>
+							<p>
+								Instead of taking the anime ending and constructing routes alongside, they decided to just tweak the same route slightly so that not all information was present at once. You end up reading the same content again and again; hearing the same puke-drink-pun ten times does not make it any funnier / funny. After the three normal character routes, I hoped the true endings at least would give something new. They did not. The only route of note is the bad end.
+							</p>
+							<p>
+								Scenes which did not feature Gamon ended up cut, explained second-hand or forced in. Some of my favourite scenes involved MMG and Takasu. None of these scenes were shown and Takasu appears for about ten lines. We did get a few new scenes but these mostly took place in Bloo Moon, were based around the blog articles and only involved Gamon, Ryoka and Izumi.
+							</p>
+							<p>
+								The flaws in the story were not helped by the mechanics. The ‘Blogging triggers’ only mattered on the first two choices, but prevented skipping through the rest of the story. After making these decisions (about 1/5 of the way through the story) you then have to reach the last part for any change to occur (about 1/5 of the way from the end). The ‘Skysensor triggers’ did matter (a certain number are required to view all ends). In this case, there was no skip prevention and the triggers lasted for only a single line of text on occasion. With both of these triggers combined, more time overall was spent skipping rather than reading.
+							</p>
+							<p>
+								The only positive I can find in this adaptation was the MMM episodes. All new content here; thirty episodes, each of about five minutes in length.
+							</p>
+							<p>
+								Overall, the Occultic;Nine game is a bad adaptation, only existing for the sake of milking. Stick to the anime or light novels. However, the path is now opened to Anonymous;Code – hopefully the next instalment in this universe does not meet the same fate.
+							</p>
+							<img class="cc mwi" src="./public/img/1512417320.jpg" />
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="1507842000" hidden>
+							<h3>
+								Ode to Chaos;Child
+							</h3>
+							<p>
+								Back in 2014 when Chaos;Child was first released, someone made the wise decision to market it as an Xbox One exclusive. With under 1500 sales in the first week, the release failed badly. I had decided to buy an Xbox One for the sole purpose of playing Chaos;Child. To this day, it is still the only Xbox One game I own. I have no regrets.
+							</p>
+							<p>
+								The story of Chaos;Child truly stands out; the various plot twists, the emotional lows and the dramatic finale all work together to forge a masterpiece. I could give a detailed review here of all the positives of Chaos;Child, but that would take a significant amount of time for me to write and for you to read; I would rather you spent that time playing.
+							</p>
+							<p>
+								No longer must you resort to reading my summary document - thank you to PQube for their localisation and promotion efforts. If you want to explore more of the Chaos World after completing Chaos;Child, check out <a href="https://nishijoutakumi.tumblr.com/search/Chaos;Child%20Anime%20Side%20Story" target="_blank">the short stories which accompanied the anime</a> or <a href="https://docs.google.com/document/d/1pSiCi2xuMp337tVwH5rQ9T_FrZTpQh_c8g5hrWE3JWc" target="_blank">the summary of Chaos;Child LoveChuChu</a>.
+							</p>
+							<p>
+								The delusion has finally become reality.
+							</p>
+							<p>
+								- Minamisawa Senri
+							</p>
+						</div>
+						<div class="pure-u-1 pure-u-xl-1-2 post" post="404" hidden>
+							Error. Post is 404, mismatch.
+							<br></br>
+							<img class="cc mwi" src="./public/img/jelly.png" />
+						</div>
+						<div class="sxl pure-u-xl-1-4">
+							<h1 class="cursor nextButton" onclick="nextPost();" title="Next" hidden>
+								&#x261e;
+							</h1>
+							<br>
+							<span class="cursor nextButton" onclick="skipPost();" title="Newest" hidden>
+								<i class="fa fa-fast-forward" aria-hidden="true"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- About page -->
+				<div id="about" class="pure-u-1 pure-u-xl-2-3 fh page" page="about" hidden>
+					<div class="fw c content">
+							<p>
+								Minamisawa Senri is the mysterious girl who appears in Chaos;Child.
+							</p>
+							<p>
+								If you have not finished Chaos;Child, anything more about her would be spoilers.
+							</p>
+							<p>
+								If you have finished Chaos;Child, you already know that she is great.
+							</p>
+							<br />
+							<img class="cc mwi" src="./public/img/avatar0.jpg" />
+							<br></br>
+							<p>
+								I mostly cover SciADV and SciVN related news and content (along with Nitroplus games).
+							</p>
+							<p>
+								I tend to write summary documents for each of the new game releases.
+							</p>
+							<p>
+								Although I don't have much free time, I am always happy to answer questions or take suggestions.
+							</p>
+					</div>
+				</div>
+
+				<!-- Summary documents page -->
+				<div id="summaryDocuments" class="pure-u-1 pure-u-xl-2-3 fh page" page="summaryDocuments" hidden>
+					<div class="fw c content">
+						<a href="https://docs.google.com/document/d/1pSiCi2xuMp337tVwH5rQ9T_FrZTpQh_c8g5hrWE3JWc" target="_blank">
+							<img class="mwi" src="./public/img/logo_cclcc.png" />
+						</a>
+						<p>
+							Prepare yourself for positive delusions galore in Chaos;Child LoveChuChu!
+						</p>
+						<br></br>
+						<a href="https://docs.google.com/document/d/1a11I9lvejMFddRkHDYUAYuTM9TfdtvkuHyEoq5Uim2c" target="_blank">
+							<img class="mwi" src="./public/img/logo_sg0.png" />
+						</a>
+						<p>
+							Experience the other half of the story; the worldline where she could not be saved - Steins;Gate 0.
+						</p>
+						<br></br>
+						<a href="https://docs.google.com/document/d/1ljo9zzV9kUTdFXQ7WeZ_0qhXtnaJwALvN7rmHWq6QVQ" target="_blank">
+							<img class="mwi" src="./public/img/logo_cc.png" />
+						</a>
+						<p>
+							Six years on, the New Generation Madness returns to Shibuya. Welcome to Chaos World, Chaos;Child.
+						</p>
+					</div>
+				</div>
+
+				<style>
+				.review {
+					 background-image:url("./pudblic/img/avatar0.jpg")
+				}
+				.review-title {
+			    border-top: 2px solid #19c4dcff;
+			    position: relative;
+					border-left: 2px solid #19c4dcff;
+					border-right: 2px solid #c1101dff;
+					/*margin-left: -2px;
+					margin-right: -2px;*/
+				}
+				.review-title:after {
+				    position: absolute;
+				    left: 50%;
+				    right: 0px;
+				    top: -2px;
+				    border-top: 2px solid #c1101dff;
+				    content: '';
+				}
+				.review-summary {
+					border-left: 2px solid #19c4dcff;
+					border-right: 2px solid #c1101dff;
+					margin-left: -2px;
+					margin-right: -2px;
+				}
+				.review-positive {
+					list-style-image: url("./public/img/positive.svg");
+					border-bottom: 2px solid #19c4dcff;
+					border-left: 2px solid #19c4dcff;
+					border-top: 2px solid #19c4dcff;
+					border-bottom-left-radius: 16px;
+					margin-right: -4px;
+					margin-left: -4px;
+				}
+				.review-negative {
+					list-style-image: url("./public/img/negative.svg");
+					border-right: 2px solid #c1101dff;
+					border-bottom: 2px solid #c1101dff;
+					border-top: 2px solid #c1101dff;
+					border-bottom-right-radius: 16px;
+					margin-right: -4px;
+					margin-left: -4px;
+				}
+				</style>
+
+				<!-- Test page -->
+				<div id="testPage" class="pure-u-1 pure-u-xl-2-3 fh page" page="testPage" hidden>
+					<div class="fw c content pure-g">
+						<div class="pure-u-1-6"></div>
+						<div class="review pure-g pure-u-2-3">
+							<div class="review-title pure-u-1">
+								Placeholder
+							</div>
+							<div class="review-summary pure-u-1">
+								Placeholder
+							</div>
+							<div class="review-positive pure-u-1-2">
+								<ul>
+									<li>Placeholder</li>
+									<li>Placeholder</li>
+									<li>Placeholder</li>
+								</ul>
+							</div>
+							<div class="review-negative pure-u-1-2">
+								<ul>
+									<li>Placeholder</li>
+									<li>Placeholder</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project progress page -->
+				<div id="projectProgress" class="pure-u-1 pure-u-xl-2-3 fh page" page="projectProgress" hidden>
+					<div class="pure-g fw c content">
+
+						<!-- Break -->
+						<div class="pure-u-1-1">
+							<br></br>
+						</div>
+
+						<!-- Progress -->
+						<div class="fw">
+							<div class="pure-u-1-2">
+								<progress value="0" max="100" class="fw">
+								</progress>
+							</div>
+							<div class="pure-u-1-8">
+								<span class="pp"/>
+							</div>
+							<div class="pure-u-3-8">
+								Drama cd summary document
+							</div>
+						</div>
+
+						<!-- Break -->
+						<div class="pure-u-1-1">
+							<br></br>
+						</div>
+
+						<!-- Progress -->
+						<div class="fw">
+							<div class="pure-u-1-2">
+								<progress value="0" max="100" class="fw">
+								</progress>
+							</div>
+							<div class="pure-u-1-8">
+								<span class="pp"/>
+							</div>
+							<div class="pure-u-3-8">
+								Minikui Mojika no Ko summary document
+							</div>
+						</div>
+
+						<!-- Break -->
+						<div class="pure-u-1-1">
+							<br></br>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Live page -->
+				<div id="live" class="pure-u-1 pure-u-xl-2-3 fh page" page="live" hidden>
+					<div class="fw c content">
+					</div>
+				</div>
+
+				<!-- Tarot page -->
+				<div id="tarot" class="pure-u-1 pure-u-xl-2-3 fh page" page="tarot" hidden>
+					<div class="fw c content">
+					</div>
+				</div>
+
+				<!-- 404 page -->
+				<div id="404" class="pure-u-1 pure-u-xl-2-3 fh page" page="404" hidden>
+					<div class="fw c content">
+						Error. Page is 404, mismatch.
+						<br></br>
+						<img class="cc mwi" src="./public/img/jelly.png" />
+					</div>
+				</div>
+
+				<!-- Twitter sidebar -->
+				<div class="sxl pure-u-xl-1-6 fh twitter-grey">
+					<a class="twitter-timeline fh"
+						data-dnt="true"
+						data-theme="dark"
+						data-link-color="#E81C4F"
+						data-height="100"
+						href="https://twitter.com/MinamisawaSenri">
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+</html>
