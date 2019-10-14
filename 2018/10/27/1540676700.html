@@ -20,8 +20,6 @@
   <meta property="og:url" content="https://minamisawasenri.com/">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Twitter widgets -->
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <!-- Pure.CSS stylesheet -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <!--[if lte IE 8]>
@@ -262,6 +260,31 @@
       margin-left: -4px;
     }
   </style>
+  <script>
+    var addScript = function(src){
+      var s = document.createElement('script');
+      s.setAttribute('src',src);
+      document.body.appendChild(s);
+    }
+    var checkDoNotTrack = function(){
+      var option = (
+        window.doNotTrack ||
+        window.navigator.doNotTrack
+      );
+
+      if(!option)
+        return false;
+      else if(
+        option.charAt(0) === '1' ||
+        option === 'yes'
+      )
+        return true;
+      else
+        return false;
+    }
+    if(!checkDoNotTrack())
+      addScript('https://platform.twitter.com/widgets.js');
+  </script>
   <script>
     if (!String.prototype.padStart) {
         String.prototype.padStart = function padStart(targetLength,padString) {
@@ -555,19 +578,19 @@
   <div class="sxl pure-u-xl-1-3">
   </div>
   <div class="pure-u-1 pure-u-xl-1-3">
-    <br></br>
+    <br><br>
     <div class="twitter-grey c">
-      <br></br>
+      <br><br>
       <div class="p">
         This website uses cookies for various nefarious reasons.
       </div>
-      <br></br>
+      <br><br>
       <img class="cc mwi" src="/public/img/cookies.png" />
-      <br></br>
+      <br><br>
       <a class="pure-button" onclick="acceptCookiesFunc();">
         Allow cookies
       </a>
-      <br></br>
+      <br><br>
     </div>
   </div>
   <div class="sxl pure-u-xl-1-3">
@@ -603,7 +626,7 @@
   <div class="pure-g c">
 
     <!-- Twitter -->
-    <div class="pure-u-1-3">
+    <div class="pure-u-1-2">
       <a href="https://twitter.com/MinamisawaSenri" target="_blank" title="Twitter">
         <i class="fa fa-twitter-square lg" aria-hidden="true">
         </i>
@@ -611,15 +634,15 @@
     </div>
 
     <!-- Tumblr -->
-    <div class="pure-u-1-3">
+    <!--div class="pure-u-1-3">
       <a href="https://nishijoutakumi.tumblr.com" target="_blank" title="Tumblr">
         <i class="fa fa-tumblr-square lg" aria-hidden="true">
         </i>
       </a>
-    </div>
+    </div-->
 
     <!-- Steam -->
-    <div class="pure-u-1-3">
+    <div class="pure-u-1-2">
       <a href="https://steamcommunity.com/profiles/76561198040793707 " target="_blank" title="Steam">
         <i class="fa fa-steam-square lg" aria-hidden="true">
         </i>
@@ -749,7 +772,7 @@
       </span>
     </div>
     <div class="ssm pure-u-1-4">
-      <a class="cursor nextButton dd" href="/2018/12/04/1543965666.html" title="Newest post">
+      <a class="cursor nextButton dd" href="/2019/10/14/1571054400.html" title="Newest post">
         <i class="fa fa-fast-forward share-margin-offset" aria-hidden="true"></i>
       </a>
     </div>
@@ -809,7 +832,7 @@
       </a>
       
       <br>
-      <a class="cursor nextButton dd" href="/2018/12/04/1543965666.html" title="Newest post">
+      <a class="cursor nextButton dd" href="/2019/10/14/1571054400.html" title="Newest post">
         <i class="fa fa-fast-forward" aria-hidden="true"></i>
       </a>
     </div>
